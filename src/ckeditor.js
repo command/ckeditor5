@@ -21,6 +21,9 @@ import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
+import Image from '@ckeditor/ckeditor5-image/src/image.js';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -40,14 +43,28 @@ ClassicEditor.builtinPlugins = [
 	Superscript,
 	Subscript,
 	Underline,
-	Paragraph
+	Paragraph,
+	Image,
+	ImageCaption,
+	ImageUpload
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading', '|', 'bold', 'italic', 'strikethrough', 'blockQuote', 'code', 'link', 'bulletedList', 'numberedList', 'codeBlock'
+			'heading',
+			'|',
+			'bold',
+			'italic',
+			'strikethrough',
+			'blockQuote',
+			'code',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'codeBlock',
+			'imageUpload'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
