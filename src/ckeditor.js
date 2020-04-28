@@ -24,6 +24,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
+import FileRepository from '@ckeditor/ckeditor5-upload/src/filerepository.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -46,7 +47,8 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	Image,
 	ImageCaption,
-	ImageUpload
+	ImageUpload,
+	FileRepository
 ];
 
 // Editor configuration.
