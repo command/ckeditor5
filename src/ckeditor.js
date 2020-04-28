@@ -25,6 +25,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 import FileRepository from '@ckeditor/ckeditor5-upload/src/filerepository.js';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -48,7 +49,8 @@ ClassicEditor.builtinPlugins = [
 	Image,
 	ImageCaption,
 	ImageUpload,
-	FileRepository
+	FileRepository,
+	MediaEmbed
 ];
 
 // Editor configuration.
@@ -66,7 +68,8 @@ ClassicEditor.defaultConfig = {
 			'bulletedList',
 			'numberedList',
 			'codeBlock',
-			'imageUpload'
+			'imageUpload',
+			'mediaEmbed'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
